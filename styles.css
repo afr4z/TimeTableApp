@@ -632,6 +632,10 @@ table.neumorphic>tbody>tr>td {
   position: relative;
 }
 
+.disabled {
+        pointer-events: none;
+        box: red;
+      }
 
 table.neumorphic>tbody>tr:hover {
   padding: 20px;
