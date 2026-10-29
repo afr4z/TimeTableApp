@@ -137,6 +137,7 @@ document.getElementById("submitbtn2").addEventListener("click", validateForm);
 var pdfbtn = document.getElementById("pdfdownload");
 pdfbtn.addEventListener("click", exportpdf);
 
+
 //event handler for switching between batches
 document.getElementById("batchChange").addEventListener("click", () => {
   document.getElementById("batch" + batch).style.display = "none";
@@ -309,7 +310,6 @@ function getEnd(t) {
 document.getElementById("iCal").addEventListener("click", () => {
   var calText = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:TimeTableApp\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH";
   document.querySelectorAll("td").forEach(e => {
-    console.log("HI");
     var text = e.innerHTML.trim();
     var s = getFormattedDate();
     if (e.classList[0] == "lunch" || e.classList[0] == "top" || e.classList[0] == "side" || text == "" || e.offsetParent == null)
